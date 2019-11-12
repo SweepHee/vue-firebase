@@ -1,36 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+  <v-card
+    color="grey lighten-4"
+    flat
+    tile
+  >
+    <v-toolbar height="64px" dense flat color="gray">
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+      <v-toolbar-title>Title</v-toolbar-title>
 
       <v-spacer></v-spacer>
-    </v-app-bar>
 
-    <v-content>
-      <router-view/>
-    </v-content>
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-heart</v-icon>
+      </v-btn>
+
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-toolbar>
+  </v-card>
+
+     <v-content>
+        <router-view/>
+      </v-content>
   </v-app>
 </template>
 
@@ -41,10 +39,6 @@ export default {
 
   components: {
 
-  },
-
-  data: () => ({
-    //
-  })
+  }
 }
 </script>
